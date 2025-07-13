@@ -159,16 +159,16 @@ bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR}
 
 For academic use, this project is licensed under [the 2-clause BSD License](https://opensource.org/license/bsd-2-clause). 
 
-## 💓 Acknowledgement
+<!-- ## 💓 Acknowledgement
 
-We would like to acknowledge that some codes and datasets are borrowed from [Scene-Diffuser](https://github.com/scenediffuser/Scene-Diffuser), [RealDex](https://github.com/4DVLab/RealDex), [DexGraspNet](https://github.com/PKU-EPIC/DexGraspNet), [UniDexGrasp](https://github.com/PKU-EPIC/UniDexGrasp), [GRAB](https://github.com/otaheri/GRAB), and [MultiDex Dataset](https://github.com/tengyu-liu/GenDexGrasp). We appreciate the authors for their great contributions to the community and for open-sourcing their code and datasets.
+We would like to acknowledge that some codes and datasets are borrowed from [Scene-Diffuser](https://github.com/scenediffuser/Scene-Diffuser), [RealDex](https://github.com/4DVLab/RealDex), [DexGraspNet](https://github.com/PKU-EPIC/DexGraspNet), [UniDexGrasp](https://github.com/PKU-EPIC/UniDexGrasp), [GRAB](https://github.com/otaheri/GRAB), and [MultiDex Dataset](https://github.com/tengyu-liu/GenDexGrasp). We appreciate the authors for their great contributions to the community and for open-sourcing their code and datasets. -->
 
 ## 🖊️ Citation
 ```
-@article{zhong2025dexgrasp,
-  title={DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness},
-  author={Zhong, Yiming and Jiang, Qi and Yu, Jingyi and Ma, Yuexin},
-  journal={arXiv preprint arXiv:2503.08257},
+@article{zhu2025evolvinggrasp,
+  title={Evolvinggrasp: Evolutionary grasp generation via efficient preference alignment},
+  author={Zhu, Yufei and Zhong, Yiming and Yang, Zemin and Cong, Peishan and Yu, Jingyi and Zhu, Xinge and Ma, Yuexin},
+  journal={arXiv preprint arXiv:2503.14329},
   year={2025}
 }
 ``` -->
