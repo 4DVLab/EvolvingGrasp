@@ -1,7 +1,6 @@
  <br>
 <p align="center">
 <h1 align="center"><strong> EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment
- withPhysicsAwareness
 </strong></h1>
   <p align="center">
       <strong><span style="color: red;">ICCV 2025</span></strong>
@@ -26,26 +25,27 @@
 
 <p align="center">
   <a href="https://evolvinggrasp.github.io/"><b>📖 Project Page</b></a> |
-  <a href="https://arxiv.org/pdf/2503.08257"><b>📄 Paper Link</b></a> |
+  <a href="https://arxiv.org/pdf/2503.14329"><b>📄 Paper Link</b></a> |
 </p>
 
 </div>
 
->  We present DexGrasp Anything, consistently surpassing previous dexterous grasping generation methods across five benchmarks. Visualization of our method's results are shown on the left.
+>  We propose EvolvingGrasp, an evolutionary grasp generation method that continuously enhances grasping performance through efficient preference alignment.
 
 <div align="center">
     <img src="image1.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
 </div>
 
 ## 📣 News
-- [2/27/2025] 🎉🎉🎉DexGraspAnything has been accepted by CVPR 2025!!!🎉🎉🎉
+- [6/26/2025] EvolvingGrasp has been accepted by ICCV 2025!!!🎉🎉🎉
+- [3/19/2025] EvolvingGrasp has been released.
 
 ## 😲 Results
-Please refer to our [homepage](https://dexgraspanything.github.io/) for more thrilling results!
+Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results!
 
 # 📚 Datasets
 
-In our data processing, the rotation and translation formula is \( Y = a(x + b) \), where \( Y \) represents the shadow hand after rotation and translation, and \( x \) is the original hand. It is important to emphasize that we use \( Y = a(x + b) \) rather than \( Y = ax + b \). This formulation allows us to conveniently transfer the rotation to the object, i.e., \(O = a^T * O \), enabling more flexible manipulation.
+<!-- In our data processing, the rotation and translation formula is \( Y = a(x + b) \), where \( Y \) represents the shadow hand after rotation and translation, and \( x \) is the original hand. It is important to emphasize that we use \( Y = a(x + b) \) rather than \( Y = ax + b \). This formulation allows us to conveniently transfer the rotation to the object, i.e., \(O = a^T * O \), enabling more flexible manipulation.
 
 | **Datasets** | **Huggingface link** | **Google drive Link (Format Compatible with Our Dataloader)** | **Paper** |
 |:---:|:---:|:---:|:---:|
@@ -54,9 +54,9 @@ In our data processing, the rotation and translation formula is \( Y = a(x + b) 
 | *DexGraspNet*          | [Huggingface](https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/resolve/main/DexGraspNet.zip) | [Datasets](https://drive.google.com/file/d/1FHJxEDl2jegOpq-g4KZ4eEVvM3gqDQCh/view)                     | ✅[DexGraspNet: A Large-Scale Robotic Dexterous Grasp Dataset for General Objects Based on Simulation](https://arxiv.org/abs/2210.02697)                                                    |
 | *UniDexGrasp*           | [Huggingface](https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/resolve/main/UniDexGrasp.zip) | [Datasets](https://drive.google.com/file/d/1-nPUP14x0VOfIqQwYU-hc-WhUaPBxEQ7/view)                     | ✅[UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy](https://arxiv.org/abs/2303.00938)                                                    |
 | *MultiDex*             | [Huggingface](https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/resolve/main/MultiDex_UR.zip) | [Datasets](https://drive.google.com/file/d/1wHdWLfvxWjpFBV_Ld-j4DwNXAr1UMERf/view)                     | ✅[GenDexGrasp: Generalizable Dexterous Grasping](https://arxiv.org/abs/2210.00722)                                                    |
-| *DexGRAB(Retargeting from Grab)*            | [Huggingface](https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/resolve/main/DexGRAB.zip) | [Datasets](https://drive.google.com/file/d/1Xmgw-c3lrkab2NIs_1i0Hq95I0Y4Sp8n/view)                     | ✅[Grab: A dataset of whole-body human grasping of objects.](https://arxiv.org/abs/2008.11200)                                                    |
+| *DexGRAB(Retargeting from Grab)*            | [Huggingface](https://huggingface.co/datasets/GaussionZhong/DexGrasp-Anything/resolve/main/DexGRAB.zip) | [Datasets](https://drive.google.com/file/d/1Xmgw-c3lrkab2NIs_1i0Hq95I0Y4Sp8n/view)                     | ✅[Grab: A dataset of whole-body human grasping of objects.](https://arxiv.org/abs/2008.11200)                                                    | -->
 
-# 🦾 Make your own dataset
+<!-- # 🦾 Make your own dataset
 - First, your dataset should contain mesh files of objects. You can create an `object_pcds_nors.pkl` file by sampling point clouds from these meshes. Modify the paths in `Process_your_dataset/make_obj_pcds.py` to build your dataset.
     ```bash
     python Process_your_dataset/make_obj_pcds.py
@@ -66,7 +66,7 @@ In our data processing, the rotation and translation formula is \( Y = a(x + b) 
 - During the testing phase, you need to generate a URDF file for all meshes. You can use `Process_your_dataset/make_obj_urdf.py` to generate them (recommended to place in the same directory level as the mesh files).
     ```bash
     python Process_your_dataset/make_obj_urdf.py
-    ```
+    ``` -->
 
 ## 🛠️ Setup
 - 1. Create a new `conda` environemnt and activate it.（My CUDA version (nvcc --version) is 11.7）
@@ -141,20 +141,20 @@ bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR}
 ```
 
 ##  Checkpoints
-| DexGrasp Anything(W/o LLM)                   | Huggingface Link | Google drive Link |
+<!-- | DexGrasp Anything(W/o LLM)                   | Huggingface Link | Google drive Link |
 |------------------------------------------------------------------------|---------|---------|
 | *Realdex*  |[Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/Realdex.pth)| [CKPT](https://drive.google.com/drive/folders/1_Nnj73l88__2i5_ek1sE8aujvAqvmpZw)    |
 | *DexGraspNet*  | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/DexGraspNet.pth)|[CKPT](https://drive.google.com/drive/folders/1Yfc9X-V21gv4YRmrD8KeMMARaHDNIBrZ)    |
 | *UniDexGrasp*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/UniDexGrasp.pth)|[CKPT](https://drive.google.com/drive/folders/16a5JfyBqe1f1BjTOxvLOujCU-vQKjv5b)    |
 | *MultiDex*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/MultiDex.pth)|[CKPT](https://drive.google.com/drive/folders/1RAFqmc0OeMGt4g6vV2Aa5g4igySlsM30)    |
-| *DexGRAB*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/DexGRAB.pth)|[CKPT](https://drive.google.com/drive/folders/1kva1FviOM59d3zbJ2Jyj8Ohvz8AWI8AT)    |
+| *DexGRAB*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/DexGRAB.pth)|[CKPT](https://drive.google.com/drive/folders/1kva1FviOM59d3zbJ2Jyj8Ohvz8AWI8AT)    | -->
 
 ## 🚩 Plan
 - [x] Paper Released.
-- [x] Source Code.
-- [x] Dataset.
-- [x] Make your own dataset.
-- [x] Checkpoints.
+- [] Source Code.
+<!-- - [x] Dataset. -->
+<!-- - [x] Make your own dataset. -->
+- [] Checkpoints.
 <!-- --- -->
 
 
@@ -165,7 +165,7 @@ For academic use, this project is licensed under [the 2-clause BSD License](http
 
 ## 💓 Acknowledgement
 
-<!-- We would like to acknowledge that some codes and datasets are borrowed from [Scene-Diffuser](https://github.com/scenediffuser/Scene-Diffuser), [RealDex](https://github.com/4DVLab/RealDex), [DexGraspNet](https://github.com/PKU-EPIC/DexGraspNet), [UniDexGrasp](https://github.com/PKU-EPIC/UniDexGrasp), [GRAB](https://github.com/otaheri/GRAB), and [MultiDex Dataset](https://github.com/tengyu-liu/GenDexGrasp). We appreciate the authors for their great contributions to the community and for open-sourcing their code and datasets. -->
+We would like to acknowledge that some codes and datasets are borrowed from [Scene-Diffuser](https://github.com/scenediffuser/Scene-Diffuser), [UGG](https://github.com/Jiaxin-Lu/ugg), [DexGrasp Anything](https://github.com/4DVLab/DexGrasp-Anything/). We appreciate the authors for their great contributions to the community and for open-sourcing their code and datasets.
 
 ## 🖊️ Citation
 ```
