@@ -1,17 +1,21 @@
-<!-- <br>
+ <br>
 <p align="center">
-<h1 align="center"><strong> DexGraspAnything:TowardsUniversalRoboticDexterousGrasping
+<h1 align="center"><strong> EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment
  withPhysicsAwareness
 </strong></h1>
   <p align="center">
-      <strong><span style="color: red;">CVPR 2025(Highlight)</span></strong>
+      <strong><span style="color: red;">ICCV 2025</span></strong>
     <br>
-   <a href='https://ymzhong66.github.io' target='_blank'>Yiming Zhong*</a>&emsp;
-   <a href='https://github.com/Kenny-K' target='_blank'>Qi Jiang*</a>&emsp;
-   <a href='https://faculty.sist.shanghaitech.edu.cn/yujingyi' target='_blank'>Jingyi Yu</a>&emsp;
-   <a href='https://yuexinma.me' target='_blank'>Yuexin Ma</a>&emsp;
+   <a href='https://github.com/csyufei' target='_blank'>Yufei Zhu*<sup>1</sup></a>&emsp;
+   <a href='https://ymzhong66.github.io/' target='_blank'>Yiming Zhong*<sup>1</sup></a>&emsp;
+   <a href='https://yizhifengyeyzm.github.io/' target='_blank'>Zemin Yang<sup>1</sup></a>&emsp;
+   <a href='https://coralemon.github.io/' target='_blank'>Peishan Cong<sup>1</sup></a>&emsp;
+   <a href='https://faculty.sist.shanghaitech.edu.cn/yujingyi' target='_blank'>Jingyi Yu<sup>1</sup></a>&emsp;
+   <a href='https://xingezhu.me/' target='_blank'>Xinge Zhu<sup>2</sup></a>&emsp;
+   <a href='https://yuexinma.me' target='_blank'>Yuexin Ma<sup>1</sup></a>&emsp;
     <br>
-    ShanghaiTech University    
+    <sup>1</sup>ShanghaiTech University&emsp;
+    <sup>2</sup>Chinese University of Hong Kong    
     <br>
     *Indicates Equal Contribution
     <br>
@@ -22,7 +26,7 @@
 
 <p align="center">
   <a href="https://evolvinggrasp.github.io/"><b>📖 Project Page</b></a> |
-  <a href="https://arxiv.org/pdf/2509.08257"><b>📄 Paper Link</b></a> |
+  <a href="https://arxiv.org/pdf/2503.08257"><b>📄 Paper Link</b></a> |
 </p>
 
 </div>
@@ -171,4 +175,4 @@ For academic use, this project is licensed under [the 2-clause BSD License](http
   journal={arXiv preprint arXiv:2503.14329},
   year={2025}
 }
-``` -->
+``` 
