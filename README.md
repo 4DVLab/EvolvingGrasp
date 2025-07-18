@@ -33,7 +33,7 @@
 >  We propose EvolvingGrasp, an evolutionary grasp generation method that continuously enhances grasping performance through efficient preference alignment.
 
 <div align="center">
-    <img src="assets/teaser.pdf" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+    <img src="assets/teaser.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
 </div>
 
 ## 📣 News
