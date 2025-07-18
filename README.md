@@ -108,7 +108,7 @@ Before training and testing, please ensure that you set the dataset path, model 
 
 ### Train
 
-- Train with a single GPU
+<!-- - Train with a single GPU
 
     ```bash
     bash scripts/grasp_gen_ur/train.sh ${EXP_NAME}
@@ -118,27 +118,27 @@ Before training and testing, please ensure that you set the dataset path, model 
 
     ```bash
     bash scripts/grasp_gen_ur/train_ddm.sh ${EXP_NAME}
-    ```
+    ``` -->
 
 ### Sample
 
-```bash
+<!-- ```bash
 bash scripts/grasp_gen_ur/sample.sh ${exp_dir} [OPT]
 # e.g., Running without Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir [OPT]
 # e.g., Running with Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir OPT
 ```
-- `[OPT]` is an optional parameter for Physics-Guided Sampling.
+- `[OPT]` is an optional parameter for Physics-Guided Sampling. -->
 
 ### Test 
 
-First, you need to run `scripts/grasp_gen_ur/sample.sh` to sample some results. 
+<!-- First, you need to run `scripts/grasp_gen_ur/sample.sh` to sample some results. 
 You also need to set the dataset file paths in `/envs/tasks/grasp_test_force_shadowhand.py` and /scripts/grasp_gen_ur/test.py`. 
 Then, we will compute quantitative metrics using these sampled results.
 
 ```bash
 bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR} 
 # e.g., bash scripts/grasp_gen_ur/test.sh  /outputs/exp_dir/eval/final/2025-03-16_19-15-31
-```
+``` -->
 
 ##  Checkpoints
 <!-- | DexGrasp Anything(W/o LLM)                   | Huggingface Link | Google drive Link |
@@ -151,10 +151,10 @@ bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR}
 
 ## 🚩 Plan
 - [x] Paper Released.
-- [] Source Code.
+- [x] Source Code.
 <!-- - [x] Dataset. -->
 <!-- - [x] Make your own dataset. -->
-- [] Checkpoints.
+- [x] Checkpoints.
 <!-- --- -->
 
 
