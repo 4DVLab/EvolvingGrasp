@@ -1,5 +1,5 @@
- <br>
-<p align="center">
+ <!-- <br> -->
+<!-- <p align="center"> -->
 <h1 align="center"><strong>EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment
 </strong></h1>
   <p align="center">
