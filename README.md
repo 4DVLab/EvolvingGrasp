@@ -56,9 +56,9 @@
 <div align="center">
     <img src="assets/result_vis.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
 </div>
-<div align="center">
+<!-- <div align="center">
     <img src="assets/result_num.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-</div>
+</div> -->
 
 <!-- Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results! -->
 
