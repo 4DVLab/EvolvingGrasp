@@ -1,6 +1,6 @@
  <br>
 <p align="center">
-<h1 align="center"><strong> EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment
+<h1 align="center"><strong>EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment
 </strong></h1>
   <p align="center">
       <strong><span style="color: red;">ICCV 2025</span></strong>
