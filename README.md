@@ -63,7 +63,7 @@
 Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results!
 
 # 📚 Datasets
-Please refer to [DexGraso Anything](https://github.com/4DVLab/DexGrasp-Anything?tab=readme-ov-file#-datasets) to process and download each dataset. 
+Please refer to [DexGrasp Anything](https://github.com/4DVLab/DexGrasp-Anything?tab=readme-ov-file#-datasets) to process and download each dataset. 
 <!-- In our data processing, the rotation and translation formula is \( Y = a(x + b) \), where \( Y \) represents the shadow hand after rotation and translation, and \( x \) is the original hand. It is important to emphasize that we use \( Y = a(x + b) \) rather than \( Y = ax + b \). This formulation allows us to conveniently transfer the rotation to the object, i.e., \(O = a^T * O \), enabling more flexible manipulation.
 
 | **Datasets** | **Huggingface link** | **Google drive Link (Format Compatible with Our Dataloader)** | **Paper** |
@@ -125,7 +125,8 @@ Please refer to [DexGraso Anything](https://github.com/4DVLab/DexGrasp-Anything?
 
 Before training and testing, please ensure that you set the dataset path, model size, whether to use LLM, sampling method, and other parameters in `configs`.
 
-### Train
+## 📖 Getting Started
+<!-- ### Train -->
 
 <!-- - Train with a single GPU
 
@@ -139,7 +140,7 @@ Before training and testing, please ensure that you set the dataset path, model 
     bash scripts/grasp_gen_ur/train_ddm.sh ${EXP_NAME}
     ``` -->
 
-### Sample
+<!-- ### Sample -->
 
 <!-- ```bash
 bash scripts/grasp_gen_ur/sample.sh ${exp_dir} [OPT]
@@ -148,7 +149,7 @@ bash scripts/grasp_gen_ur/sample.sh ${exp_dir} [OPT]
 ```
 - `[OPT]` is an optional parameter for Physics-Guided Sampling. -->
 
-### Test 
+<!-- ### Test  -->
 
 <!-- First, you need to run `scripts/grasp_gen_ur/sample.sh` to sample some results. 
 You also need to set the dataset file paths in `/envs/tasks/grasp_test_force_shadowhand.py` and /scripts/grasp_gen_ur/test.py`. 
@@ -159,7 +160,7 @@ bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR}
 # e.g., bash scripts/grasp_gen_ur/test.sh  /outputs/exp_dir/eval/final/2025-03-16_19-15-31
 ``` -->
 
-##  Checkpoints
+<!-- ##  Checkpoints -->
 <!-- | DexGrasp Anything(W/o LLM)                   | Huggingface Link | Google drive Link |
 |------------------------------------------------------------------------|---------|---------|
 | *Realdex*  |[Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/Realdex.pth)| [CKPT](https://drive.google.com/drive/folders/1_Nnj73l88__2i5_ek1sE8aujvAqvmpZw)    |
