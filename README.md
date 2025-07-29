@@ -52,7 +52,7 @@
 - [ ] Release Checkpoints in different datasets.
 
 ## 😲 Results
-
+>  Evolution of robotic grasp preferences during efficient feedback-driven finetuning across 10 epochs.
 <div align="center">
     <img src="assets/result_vis.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
 </div>
