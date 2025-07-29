@@ -48,7 +48,9 @@
 
 ## 🚩 Plan
 - [x] Release Paper.
-- [ ] Release Source Code.
+- [ ] Release Inference Code.
+- [ ] Release evaluation Code.
+- [ ] Release training Code.
 - [ ] Release Checkpoints in different datasets.
 
 ## 😲 Results
