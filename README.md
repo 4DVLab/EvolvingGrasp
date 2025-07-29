@@ -60,10 +60,10 @@
     <img src="assets/result_num.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
 </div> -->
 
-<!-- Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results! -->
+Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results!
 
 # 📚 Datasets
-
+Please refer to [DexGraso Anything](https://github.com/4DVLab/DexGrasp-Anything?tab=readme-ov-file#-datasets) to process and download each dataset. 
 <!-- In our data processing, the rotation and translation formula is \( Y = a(x + b) \), where \( Y \) represents the shadow hand after rotation and translation, and \( x \) is the original hand. It is important to emphasize that we use \( Y = a(x + b) \) rather than \( Y = ax + b \). This formulation allows us to conveniently transfer the rotation to the object, i.e., \(O = a^T * O \), enabling more flexible manipulation.
 
 | **Datasets** | **Huggingface link** | **Google drive Link (Format Compatible with Our Dataloader)** | **Paper** |
@@ -91,8 +91,8 @@
 - 1. Create a new `conda` environemnt and activate it.（My CUDA version (nvcc --version) is 11.7）
 
     ```bash
-    conda create -n DGA python=3.8
-    conda activate DGA
+    conda create -n evolvinggrasp python=3.8
+    conda activate evolvinggrasp
     pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
     ```
 
