@@ -22,11 +22,17 @@
 </p>
 
   
-
 <p align="center">
+  <a href='https://arxiv.org/pdf/2503.14329'>
+    <img src='https://img.shields.io/badge/Paper-PDF-yellow?style=flat&logo=arXiv&logoColor=yellow'></a>
+  <a href='https://evolvinggrasp.github.io/'>
+    <img src='https://img.shields.io/badge/Project-Page-green?style=flat&logo=Google%20chrome&logoColor=green'></a>
+</p>
+
+<!-- <p align="center">
   <a href="https://evolvinggrasp.github.io/"><b>📖 Project Page</b></a> |
   <a href="https://arxiv.org/pdf/2503.14329"><b>📄 Paper Link</b></a> |
-</p>
+</p> -->
 
 </div>
 
@@ -39,6 +45,11 @@
 ## 📣 News
 - [6/26/2025] EvolvingGrasp has been accepted by ICCV 2025!!!🎉🎉🎉
 - [3/19/2025] EvolvingGrasp has been released.
+
+## 🚩 Plan
+- [x] Paper Released.
+- [ ] Source Code.
+- [ ] Checkpoints.
 
 ## 😲 Results
 Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results!
@@ -149,12 +160,6 @@ bash scripts/grasp_gen_ur/test.sh ${EVAL_DIR}
 | *MultiDex*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/MultiDex.pth)|[CKPT](https://drive.google.com/drive/folders/1RAFqmc0OeMGt4g6vV2Aa5g4igySlsM30)    |
 | *DexGRAB*   | [Huggingface](https://huggingface.co/GaussionZhong/Dexgraspanyting/resolve/main/DexGRAB.pth)|[CKPT](https://drive.google.com/drive/folders/1kva1FviOM59d3zbJ2Jyj8Ohvz8AWI8AT)    | -->
 
-## 🚩 Plan
-- [x] Paper Released.
-- [x] Source Code.
-<!-- - [x] Dataset. -->
-<!-- - [x] Make your own dataset. -->
-- [x] Checkpoints.
 <!-- --- -->
 
 
@@ -168,11 +173,27 @@ For academic use, this project is licensed under [the 2-clause BSD License](http
 We would like to acknowledge that some codes and datasets are borrowed from [Scene-Diffuser](https://github.com/scenediffuser/Scene-Diffuser), [UGG](https://github.com/Jiaxin-Lu/ugg), [DexGrasp Anything](https://github.com/4DVLab/DexGrasp-Anything/). We appreciate the authors for their great contributions to the community and for open-sourcing their code and datasets.
 
 ## 🖊️ Citation
+If you find our work helpful, please cite:
 ```
 @article{zhu2025evolvinggrasp,
   title={Evolvinggrasp: Evolutionary grasp generation via efficient preference alignment},
   author={Zhu, Yufei and Zhong, Yiming and Yang, Zemin and Cong, Peishan and Yu, Jingyi and Zhu, Xinge and Ma, Yuexin},
   journal={arXiv preprint arXiv:2503.14329},
+  year={2025}
+}
+``` 
+Please also consider citing the following papers that inspired EvolvingGrasp.
+```
+@article{huang2023diffusion,
+  title={Diffusion-based Generation, Optimization, and Planning in 3D Scenes},
+  author={Huang, Siyuan and Wang, Zan and Li, Puhao and Jia, Baoxiong and Liu, Tengyu and Zhu, Yixin and Liang, Wei and Zhu, Song-Chun},
+  journal={arXiv preprint arXiv:2301.06015},
+  year={2023}
+}
+@article{zhong2025dexgrasp,
+  title={DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness},
+  author={Zhong, Yiming and Jiang, Qi and Yu, Jingyi and Ma, Yuexin},
+  journal={arXiv preprint arXiv:2503.08257},
   year={2025}
 }
 ``` 
