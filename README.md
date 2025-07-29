@@ -44,15 +44,23 @@
 
 ## 📣 News
 - [6/26/2025] EvolvingGrasp has been accepted by ICCV 2025!!!🎉🎉🎉
-- [3/19/2025] EvolvingGrasp has been released.
+- [3/19/2025] The paper has been released.
 
 ## 🚩 Plan
-- [x] Paper Released.
-- [ ] Source Code.
-- [ ] Checkpoints.
+- [x] Release Paper.
+- [ ] Release Source Code.
+- [ ] Release Checkpoints in different datasets.
 
 ## 😲 Results
-Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results!
+
+<div align="center">
+    <img src="assets/result_vis.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+</div>
+<div align="center">
+    <img src="assets/result_num.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+</div>
+
+<!-- Please refer to our [homepage](https://evolvinggrasp.github.io/) for more thrilling results! -->
 
 # 📚 Datasets
 
@@ -184,11 +192,12 @@ If you find our work helpful, please cite:
 ``` 
 Please also consider citing the following papers that inspired EvolvingGrasp.
 ```
-@article{huang2023diffusion,
-  title={Diffusion-based Generation, Optimization, and Planning in 3D Scenes},
-  author={Huang, Siyuan and Wang, Zan and Li, Puhao and Jia, Baoxiong and Liu, Tengyu and Zhu, Yixin and Liang, Wei and Zhu, Song-Chun},
-  journal={arXiv preprint arXiv:2301.06015},
-  year={2023}
+@inproceedings{motionlcm,
+  title={Motionlcm: Real-time controllable motion generation via latent consistency model},
+  author={Dai, Wenxun and Chen, Ling-Hao and Wang, Jingbo and Liu, Jinpeng and Dai, Bo and Tang, Yansong},
+  booktitle={ECCV},
+  pages={390--408},
+  year={2025}
 }
 @article{zhong2025dexgrasp,
   title={DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness},
