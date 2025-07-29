@@ -94,6 +94,7 @@ Please refer to [DexGrasp Anything](https://github.com/4DVLab/DexGrasp-Anything?
     conda create -n evolvinggrasp python=3.8
     conda activate evolvinggrasp
     pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+    pip install peft --no-dependencies
     ```
 
 - 2. Install the required packages.
