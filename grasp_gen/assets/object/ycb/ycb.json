@@ -1,0 +1,32 @@
+{
+    "files": {
+        "master_chef_can": "002_master_chef_can/google_16k/nontextured.stl",
+        "cracker_box": "003_cracker_box/google_16k/nontextured.stl",
+        "sugar_box": "004_sugar_box/google_16k/nontextured.stl",
+        "tomato_soup_can": "005_tomato_soup_can/google_16k/nontextured.stl",
+        "mustard_bottle": "006_mustard_bottle/google_16k/nontextured.stl",
+        "tuna_fish_can": "007_tuna_fish_can/google_16k/nontextured.stl",
+        "pudding_box": "008_pudding_box/google_16k/nontextured.stl",
+        "gelatin_box": "009_gelatin_box/google_16k/nontextured.stl",
+        "potted_meat_can": "010_potted_meat_can/google_16k/nontextured.stl",
+        "strawberry": "012_strawberry/google_16k/nontextured.stl",
+        "apple": "013_apple/google_16k/nontextured.stl",
+        "lemon": "014_lemon/google_16k/nontextured.stl",
+        "peach": "015_peach/google_16k/nontextured.stl",
+        "pear": "016_pear/google_16k/nontextured.stl",
+        "orange": "017_orange/google_16k/nontextured.stl",
+        "plum": "018_plum/google_16k/nontextured.stl",
+        "pitcher_base": "019_pitcher_base/google_16k/nontextured.stl",
+        "bleach_cleanser": "021_bleach_cleanser/google_16k/nontextured.stl",
+        "sponge": "026_sponge/google_16k/nontextured.stl",
+        "power_drill": "035_power_drill/google_16k/nontextured.stl",
+        "wood_block": "036_wood_block/google_16k/nontextured.stl",
+        "phillips_screwdriver": "043_phillips_screwdriver/google_16k/nontextured.stl",
+        "hammer": "048_hammer/google_16k/nontextured.stl",
+        "mini_soccer_ball": "053_mini_soccer_ball/google_16k/nontextured.stl",
+        "baseball": "055_baseball/google_16k/nontextured.stl",
+        "foam_brick": "061_foam_brick/google_16k/nontextured.stl",
+        "toy_airplane": "072-a_toy_airplane/google_16k/nontextured.stl",
+        "rubiks_cube": "077_rubiks_cube/google_16k/nontextured.stl"
+    }
+}

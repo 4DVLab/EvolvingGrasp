@@ -1,0 +1,8 @@
+{
+    "urdf_path": {
+        "shadowhand": "assets/urdf/sr_grasp_description/urdf/shadowhand.urdf"
+    },
+    "meshes_path": {
+        "shadowhand": "assets/urdf/sr_grasp_description/meshes"
+    }
+}

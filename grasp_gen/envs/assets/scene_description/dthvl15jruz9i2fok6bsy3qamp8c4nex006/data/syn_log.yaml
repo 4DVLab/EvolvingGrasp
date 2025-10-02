@@ -1,0 +1,7 @@
+Scene ID: 6
+Desc of tra_record: num_sample * (i_sample_tra_size * 7(DoF))
+Desc of pose_record: num_sample * (7(start pos+quat) + 7(end pos+quat))
+Num Trajectories: 100
+Total Attempts: 359
+Succ Rate: 0.2757660167130919
+Time Cost: 147

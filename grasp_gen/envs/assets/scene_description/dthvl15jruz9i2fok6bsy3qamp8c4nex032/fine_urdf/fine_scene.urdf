@@ -1,0 +1,171 @@
+
+<?xml version="1.0"?>
+<robot name="scene">
+  <link name="table">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/table.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/table.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="obj_1">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_1.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_1.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_1" type="fixed">
+    <parent link="table" />
+    <child link="obj_1" />
+  </joint>
+
+  <link name="obj_2">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_2.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_2.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_2" type="fixed">
+    <parent link="table" />
+    <child link="obj_2" />
+  </joint>
+
+  <link name="obj_3">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_3.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_3.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_3" type="fixed">
+    <parent link="table" />
+    <child link="obj_3" />
+  </joint>
+
+  <link name="obj_4">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_4.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_4.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_4" type="fixed">
+    <parent link="table" />
+    <child link="obj_4" />
+  </joint>
+
+  <link name="obj_5">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_5.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_5.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_5" type="fixed">
+    <parent link="table" />
+    <child link="obj_5" />
+  </joint>
+
+  <link name="obj_6">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_6.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_6.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_6" type="fixed">
+    <parent link="table" />
+    <child link="obj_6" />
+  </joint>
+
+  <link name="obj_7">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_7.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_7.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_7" type="fixed">
+    <parent link="table" />
+    <child link="obj_7" />
+  </joint>
+
+  <link name="obj_8">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_8.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="./meshes/obj_8.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_8" type="fixed">
+    <parent link="table" />
+    <child link="obj_8" />
+  </joint>
+
+</robot>

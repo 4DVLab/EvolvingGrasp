@@ -1,0 +1,12 @@
+
+<?xml version="1.0"?>
+<robot name="scene">
+  <link name="scene">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="SceneMesh.stl" scale="1.00 1.00 1.00"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

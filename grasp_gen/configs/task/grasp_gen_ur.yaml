@@ -1,0 +1,103 @@
+# task: pose generation
+name: grasp_gen
+lr: 1e-4
+eval_interval: 1
+eval_visualize: 1
+
+train:
+  batch_size: 2400
+  # num_workers: 16
+  num_workers: 0
+  num_epochs: 2000
+  log_step: 100
+
+test:
+  epoch: null
+  batch_size: 32
+  num_workers: 0
+
+dataset:
+  use_llm: false
+
+  name: MultiDexShadowHandUR
+  normalize_x: true
+  normalize_x_trans: true
+  desc: '[MultiDex ShadowHand] -- dataset used for grasp pose generation condition on 3D object'
+  modeling_keys: ['allDoFs']
+  num_points: 2048
+  frame_interval_train: 5
+  frame_interval_test: 10
+  device: cuda
+  use_color: false
+  use_normal: true
+  is_downsample: false
+  asset_dir: /inspurfs/group/mayuexin/datasets/MultiDex_UR
+  asset_dir_slurm: /inspurfs/group/mayuexin/datasets/MultiDex_UR
+  DPO_set_dir: /inspurfs/group/mayuexin/datasets/iccv_Positive_Negative_datasets
+  use_all_pra: True
+  train_DPO: false
+  
+  # name: DexGraspNet
+  # normalize_x: true
+  # normalize_x_trans: true
+  # desc: '[DexGraspNet ShadowHand] -- dataset used for grasp pose generation condition on 3D object'
+  # modeling_keys: ['allDoFs']
+  # num_points: 2048
+  # frame_interval_train: 5
+  # frame_interval_test: 10
+  # device: cuda
+  # use_color: false
+  # use_normal: true
+  # is_downsample: false
+  # asset_dir: /inspurfs/group/mayuexin/datasets/DexGraspNet
+  # asset_dir_slurm: /inspurfs/group/mayuexin/datasets/DexGraspNet
+  # use_all_pra: true
+
+  # name: DexGRAB
+  # normalize_x: true
+  # normalize_x_trans: true
+  # desc: '[DexGRAB ShadowHand] -- dataset used for grasp pose generation condition on 3D object(ours)'
+  # modeling_keys: ['allDoFs']
+  # num_points: 2048
+  # frame_interval_train: 5
+  # frame_interval_test: 10
+  # device: cuda
+  # use_color: false
+  # use_normal: true
+  # is_downsample: false
+  # asset_dir: /inspurfs/group/mayuexin/datasets/DexGRAB
+  # asset_dir_slurm: /inspurfs/group/mayuexin/datasets/DexGRAB
+  # use_all_pra: true
+  
+  # name: real_dex
+  # normalize_x: true
+  # normalize_x_trans: true
+  # normalize_x_rot: true
+  # desc: '[real_dex ShadowHand] -- dataset used for grasp pose generation condition on 3D object'
+  # modeling_keys: ['allDoFs']
+  # num_points: 2048
+  # frame_interval_train: 5
+  # frame_interval_test: 10
+  # device: cuda
+  # use_color: false
+  # use_normal: true
+  # is_downsample: false
+  # asset_dir: /inspurfs/group/mayuexin/datasets/Realdex
+  # asset_dir_slurm: /inspurfs/group/mayuexin/datasets/Realdex
+  # use_all_pra: true
+
+  train_transforms: ['NumpyToTensor']
+  test_transforms: ['NumpyToTensor']
+  transform_cfg: {}
+
+visualizer:
+  name: GraspGenURVisualizer
+  ksample: 32 # sample k case in each case
+  vis_denoising: false # visualize denoising process
+  save_mesh: false
+  ## visualization config used in training
+  visualize: false
+  interval: 150
+  use_llm: false
+  visualize_html: false
+

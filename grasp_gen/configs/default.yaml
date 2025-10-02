@@ -1,0 +1,113 @@
+## config/default.yaml
+hydra:
+  run:
+    dir: ${exp_dir}
+  output_subdir: null
+
+defaults:
+  - _self_
+  - diffuser: null
+  - model: null
+  - task: null
+  - optimizer: null
+  - planner: null
+
+
+exp_name: default
+# bash scripts/grasp_gen_ur/train_ddm.sh unidex
+# bash scripts/grasp_gen_ur/sample.sh /inspurfs/group/mayuexin/zym/diffusion+hand/graps_gen/outputs/2024-11-02_09-38-31_diversity_4datasets [OPT]
+# bash scripts/grasp_gen_ur/filter_0.15.sh /public/home/zym1525742497/outputs/test/eval/final/0.15   /inspurfs/group/mayuexin/zym/diffusion+hand/Scene-Diffuser/MultiDex_UR
+# bash scripts/grasp_gen_ur/test.sh  /inspurfs/group/mayuexin/zym/diffusion+hand/graps_gen/outputs/spen/eval/final/2024-11-11_10-56-10
+# bash scripts/grasp_gen_ur/test_ugg.sh /inspurfs/group/mayuexin/zym/diffusion+hand/UniDexGrasp/dexgrasp_generation/result_multidex /inspurfs/group/mayuexin/zym/diffusion+hand/Scene-Diffuser/MultiDex_UR
+# output_dir: /public/home/zym1525742497/outputs
+# output_dir: /inspurfs/group/mayuexin/zym/output
+output_dir: /inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/train
+# exp_dir: ${output_dir}/2024-07-07_02-16-05_jiangqi_test
+# exp_dir: ${output_dir}/2024-07-02_19-17-08_dexgrasp
+exp_dir: ${output_dir}/${now:%Y-%m-%d_%H-%M-%S}_${exp_name}
+# exp_dir: ${output_dir}/2024-10-12_23-23-39_unidex
+# exp_dir: ${output_dir}/2024-08-05_00-54-27_multi_10_5_1
+# exp_dir: ${output_dir}/2024-08-10_02-25-17_combined_datasets4_12_6
+# exp_dir: ${output_dir}/2024-08-16_01-55-23_unidex+dexgrasp
+# exp_dir: ${output_dir}/2024-08-16_02-01-31_dexgrasp_100
+# exp_dir: ${output_dir}/2024-08-17_14-51-38_unidex
+# exp_dir: ${output_dir}/2024-08-19_21-12-33_transformermulti
+# exp_dir: ${output_dir}/2024-08-24_09-39-10_occup_gpu
+# exp_dir: ${output_dir}/2024-08-25_01-51-56_newmulti
+# exp_dir: ${output_dir}/2024-08-26_03-33-05_dataset4_new
+# exp_dir: ${output_dir}/2024-09-01_04-01-38_combined_3_12_6
+# exp_dir: ${output_dir}/2024-10-04_01-57-31_dexgrasp_spen_dis
+tb_dir: ${exp_dir}/tb_logs
+vis_dir: ${exp_dir}/visual
+ckpt_dir: ${exp_dir}/ckpts
+load_ckpt_dir: None
+
+slurm: false
+gpu: 0
+lora_rank: 16
+eta: 1.0
+learning_rate: 1e-5
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 0.0001
+adam_epsilon: 1e-08
+beta: 1.0
+eps: 0.1
+save_RL_dir: /inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/ckpts_RL_epoch/multidex_N_ft_10/4
+pc_num_points: 2048
+dataset_file_path: '/inspurfs/group/mayuexin/datasets/MultiDex_UR/shadowhand/need2conbine_data.pt'
+lr_decay1: 1e-7
+lr_decay2: 1e-4
+lr_decay3: 1e-9
+
+seed: 42
+stability_config: 'envs/tasks/grasp_test_force.yaml'
+onscreen: false
+
+## discriminator
+PC_NUM_POINTS: 2048
+MODEL:
+  discriminator:
+    gen_hand: True
+    gen_pc: True
+
+    # contact
+    gen_contact: True
+    loss_contact: l2
+    contact_map_normalize_factor: 200.
+    pc_local_pts_dim: 4
+
+    task: ['obj2hand']
+    use_checkpoint: True
+    hand_param_dim: 64
+
+    beta_start: 0.001
+    beta_end: 0.02
+    n_timestep: 200
+
+    #disc
+    disc:
+      discriminator_checkpoint: /inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/discriminator/discriminator.ckpt
+      decoded_hand: True
+      embed_dim: 128
+      cls_mode: cat
+      type: ori_pc
+      hand_param_dim: 22
+      pc_global_dim: 128
+      pc_local_pts: 2048
+      pc_local_pts_dim: 3
+      pos_drop_rate: 0.0
+      depth: 2
+      attn_drop_rate: 0.0
+      drop_rate: 0.0
+      qkv_bias: false
+      num_heads: 4
+      mlp_ratio: 2
+      qk_scale: None
+      use_checkpoint: false
+
+
+## for saving model
+save_model_interval: 50
+save_model_seperately: true
+save_scene_model: true # save scene model or not, important!!!

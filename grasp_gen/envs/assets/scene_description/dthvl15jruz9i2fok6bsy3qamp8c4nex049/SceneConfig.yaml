@@ -1,0 +1,99 @@
+scene_id: 49
+setting_desc: RandomSampling
+num_primitives: 7
+0:
+  dimensions:
+  - 2.0
+  - 2.0
+  - 0.1
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: 0.0
+    y: 0.0
+    z: -0.05
+  type: BOX
+1:
+  dimensions:
+  - 0.43319270678910327
+  - 0.2915118762821693
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: -0.5894087116363663
+    y: 0.1341161788608471
+    z: 0.21659635339455163
+  type: CONE
+2:
+  dimensions:
+  - 0.41272954533797424
+  - 0.1466223832213874
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: -0.2796537991270059
+    y: -0.3728308994856252
+    z: 0.20636477266898712
+  type: CYLINDER
+3:
+  dimensions:
+  - 0.11865494077389412
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: 0.3132791117185298
+    y: -0.40992657572997865
+    z: 0.043880169986559386
+  type: SPHERE
+4:
+  dimensions:
+  - 0.17332698302246352
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: 0.3198425461080183
+    y: -0.6166505743406934
+    z: 0.11393709584385915
+  type: SPHERE
+5:
+  dimensions:
+  - 0.3711252801240177
+  - 0.1411628183379084
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: -0.20484943213800108
+    y: -0.5150077602213116
+    z: 0.18556264006200884
+  type: CYLINDER
+6:
+  dimensions:
+  - 0.1467248906033471
+  orientation:
+    w: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  position:
+    x: -0.49598037019416064
+    y: 0.3145148004196312
+    z: 0.02922983941534566
+  type: SPHERE

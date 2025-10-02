@@ -1,0 +1,119 @@
+# 在线DPO训练配置
+name: grasp_gen_online
+lr: 1e-4
+eval_interval: 1
+eval_visualize: 1
+
+# 在线训练配置
+online:
+  buffer_size: 10000  # 在线数据缓冲区大小
+  min_batch_size: 32  # 最小批次大小
+  update_frequency: 10  # 模型更新频率
+  data_collection_interval: 0.1  # 数据收集间隔（秒）
+  save_interval: 100  # 模型保存间隔
+  max_buffer_age: 3600  # 缓冲区数据最大年龄（秒）
+
+train:
+  batch_size: 64  # 在线训练批次大小
+  num_workers: 0
+  num_epochs: 1  # 在线训练不使用epoch概念
+  log_step: 10  # 日志记录频率
+
+test:
+  epoch: null
+  batch_size: 32
+  num_workers: 0
+
+dataset:
+  use_llm: false
+  name: MultiDexShadowHandUR
+  normalize_x: true
+  normalize_x_trans: true
+  desc: '[MultiDex ShadowHand] -- 在线DPO训练数据集'
+  modeling_keys: ['allDoFs']
+  num_points: 2048
+  frame_interval_train: 5
+  frame_interval_test: 10
+  device: cuda
+  use_color: false
+  use_normal: true
+  is_downsample: false
+  asset_dir: /inspurfs/group/mayuexin/datasets/MultiDex_UR
+  asset_dir_slurm: /inspurfs/group/mayuexin/datasets/MultiDex_UR
+  DPO_set_dir: /inspurfs/group/mayuexin/datasets/iccv_Positive_Negative_datasets
+  use_all_pra: True
+  train_DPO: true  # 启用DPO训练
+  
+  train_transforms: ['NumpyToTensor']
+  test_transforms: ['NumpyToTensor']
+  transform_cfg: {}
+
+visualizer:
+  name: GraspGenURVisualizer
+  ksample: 32
+
+# DPO特定配置
+dpo:
+  beta: 1.0  # DPO温度参数
+  eps: 0.1  # 裁剪参数
+  preference_strength: 1.0  # 偏好强度
+  online_learning_rate: 1e-5  # 在线学习率
+  reference_model_update_freq: 1000  # 参考模型更新频率
+  
+# 在线数据收集配置
+data_collection:
+  enable_real_robot: false  # 是否启用真实机器人数据收集
+  enable_human_feedback: true  # 是否启用人类反馈
+  enable_simulation: true  # 是否启用仿真数据收集
+  
+  # 机器人配置
+  robot:
+    type: "shadowhand"  # 机器人类型
+    sensor_rate: 100  # 传感器采样率
+    max_grasp_attempts: 10  # 最大抓取尝试次数
+    
+  # 人类反馈配置
+  human_feedback:
+    feedback_interface: "web"  # 反馈界面类型
+    feedback_questions: [
+      "这个抓取姿态看起来自然吗？",
+      "这个抓取姿态能够稳定抓取物体吗？",
+      "这个抓取姿态符合你的偏好吗？"
+    ]
+    feedback_scale: 5  # 反馈评分范围
+    
+  # 仿真配置
+  simulation:
+    env_type: "gym"  # 仿真环境类型
+    max_episode_length: 100  # 最大回合长度
+    success_threshold: 0.8  # 成功阈值
+    
+# 模型更新策略
+update_strategy:
+  type: "continuous"  # 更新策略类型：continuous, periodic, adaptive
+  min_samples_for_update: 32  # 更新所需最小样本数
+  max_update_frequency: 1.0  # 最大更新频率（Hz）
+  
+  # 自适应更新
+  adaptive:
+    loss_threshold: 0.1  # 损失阈值
+    improvement_threshold: 0.01  # 改进阈值
+    
+# 缓冲区管理
+buffer_management:
+  type: "fifo"  # 缓冲区类型：fifo, priority, experience_replay
+  priority_weight: 0.8  # 优先级权重
+  experience_replay:
+    alpha: 0.6  # 经验回放参数
+    beta: 0.4
+    max_priority: 1.0
+    
+# 监控和日志
+monitoring:
+  enable_tensorboard: true
+  enable_wandb: false
+  log_metrics: ["loss", "accuracy", "buffer_size", "update_frequency"]
+  alert_thresholds:
+    loss_increase: 0.5
+    buffer_overflow: 0.9
+    training_stall: 60  # 秒 
