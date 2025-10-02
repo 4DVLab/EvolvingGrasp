@@ -48,7 +48,7 @@
 
 ## 🚩 Plan
 - [x] Release Paper.
-- [ ] Release Inference Code.
+- [ ] Release Inference Code of Consistency Model.
 - [ ] Release evaluation Code.
 - [ ] Release training Code.
 - [ ] Release Checkpoints in different datasets.
