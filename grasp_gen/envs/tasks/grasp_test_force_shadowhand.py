@@ -593,8 +593,8 @@ class IsaacGraspTestForce_shadowhand(BaseTask):
                 #multidex
                 dataset_name = self.object_name.split('+')[0]
                 object_name = self.object_name.split('+')[1]
-                object_urdf_path = os.path.join(f'/inspurfs/group/mayuexin/zym/diffusion+hand/Scene-Diffuser/assets/object/{dataset_name}/{object_name}/{object_name}.urdf')
-                object_mesh_path = os.path.join(f'/inspurfs/group/mayuexin/zym/diffusion+hand/Scene-Diffuser/assets/object/{dataset_name}/{object_name}/{object_name}.stl')
+                object_urdf_path = os.path.join(f'/inspurfs/group/mayuexin/zhuyufei/EvolvingGrasp/grasp_gen/assets/object/{dataset_name}/{object_name}/{object_name}.urdf')
+                object_mesh_path = os.path.join(f'/inspurfs/group/mayuexin/zhuyufei/EvolvingGrasp/grasp_gen/assets/object/{dataset_name}/{object_name}/{object_name}.stl')
                 
                 # #realdex
                 # object_mesh_path = os.path.join('/inspurfs/group/mayuexin/datasets/Realdex/meshdata', f'{self.object_name}.obj')

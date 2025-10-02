@@ -207,7 +207,7 @@ def collision_tester(cfg=None, grasps=None, device=None, object_name_=None, succ
 
     # grasps = pickle.load(open(os.path.join(args.eval_dir, 'res_diffuser.pkl'), 'rb'))
     #multi
-    obj_pcds_nors_dict = pickle.load(open('/inspurfs/group/mayuexin/zym/diffusion+hand/Scene-Diffuser/MultiDex_UR/object_pcds_nors.pkl', 'rb'))
+    obj_pcds_nors_dict = pickle.load(open('/inspurfs/group/mayuexin/zhuyufei/EvolvingGrasp/grasp_gen/MultiDex_UR/object_pcds_nors.pkl', 'rb'))
     #realdex
     # obj_pcds_nors_dict = pickle.load(open('/inspurfs/group/mayuexin/datasets/Realdex/object_pcds_nors.pkl', 'rb'))
     #grasp_anyting

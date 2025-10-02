@@ -93,7 +93,7 @@ def main(cfg: DictConfig) -> None:
     # cfg.save_RL_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/ckpts_RL_epoch/multidex_N_ft_10/4/'             ## DPO
     # cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/DDPM_pre_all_para/multidex/ckpts'
     # cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/train/2025-01-16_23-00-35_/ckpts'         ## multidex
-    cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/EvolvingGrasp/grasp_gen/outputs/grasp_generation/train/2025-02-07_20-15-16_/ckpts'           ## multidex + guidance_loss
+    cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/outputs/grasp_generation/train/2025-02-07_20-15-16_/ckpts'           ## multidex + guidance_loss
     # cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/train/2025-02-05_22-58-04_/ckpts'         ## realdex
     # cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/train/2025-02-06_22-39-13_/ckpts'           ## realdex + guidance_loss
     # cfg.load_ckpt_dir = '/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/grasp_generation/train/2025-02-16_20-47-13_/ckpts'           ## dexgrab + guidance_loss

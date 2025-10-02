@@ -143,19 +143,21 @@ Before training and testing, please ensure that you set the dataset path, model 
     bash scripts/grasp_gen_ur/train_ddm.sh ${EXP_NAME}
     ``` -->
 
-### Sample
+### Sample and Evaluation
+
+The evaluation is after sampling grasp poses. First, some grasp poses are sampled, then, we will compute quantitative metrics using these sampled results.
 
 ```bash
+cd grasp_gen
 bash scripts/grasp_gen_ur/sample_CM.sh ${exp_dir} [OPT]
 # e.g., Running without Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir [OPT]
 # e.g., Running with Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir OPT
 ```
 - `[OPT]` is an optional parameter for Physics-Guided Sampling.
 
-<!-- ### Test  -->
+<!-- ### Evaluation 
 
-<!-- First, you need to run `scripts/grasp_gen_ur/sample.sh` to sample some results. 
-You also need to set the dataset file paths in `/envs/tasks/grasp_test_force_shadowhand.py` and /scripts/grasp_gen_ur/test.py`. 
+The evaluation is after sampling grasp poses.
 Then, we will compute quantitative metrics using these sampled results.
 
 ```bash

@@ -356,7 +356,7 @@ class GraspGenURVisualizer():
             # rewards_, _ = evaluation_grasp(cfg=cfg, grasps=res, obj_mesh=obj_mesh, device=device, object_name=object_name)
         mean_time = np.mean(cost_time)
         logger.info(f'The inference time is: {mean_time}')
-        # rewards_all = evaluation_grasp_all(cfg=cfg, grasps=res, device=device)
+        rewards_all = evaluation_grasp_all(cfg=cfg, grasps=res, device=device)
         # pickle.dump(res, open(os.path.join(f'/inspurfs/group/mayuexin/zhuyufei/graps_gen/outputs/pkl_file/multidex/{cfg.diffuser.num_inference_steps}', 'res_diffuser.pkl'), 'wb'))
 
 def create_visualizer_val(cfg: DictConfig) -> nn.Module:
