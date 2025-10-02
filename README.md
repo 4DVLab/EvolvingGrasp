@@ -143,14 +143,14 @@ Before training and testing, please ensure that you set the dataset path, model 
     bash scripts/grasp_gen_ur/train_ddm.sh ${EXP_NAME}
     ``` -->
 
-<!-- ### Sample -->
+### Sample
 
-<!-- ```bash
-bash scripts/grasp_gen_ur/sample.sh ${exp_dir} [OPT]
+```bash
+bash scripts/grasp_gen_ur/sample_CM.sh ${exp_dir} [OPT]
 # e.g., Running without Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir [OPT]
 # e.g., Running with Physics-Guided Sampling:   bash scripts/grasp_gen_ur/sample.sh /outputs/exp_dir OPT
 ```
-- `[OPT]` is an optional parameter for Physics-Guided Sampling. -->
+- `[OPT]` is an optional parameter for Physics-Guided Sampling.
 
 <!-- ### Test  -->
 
